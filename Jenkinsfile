@@ -3,14 +3,19 @@ pipeline{
     stages{
         stage('Compile'){   
             steps{
-             chmod +x gradlew   
-             sh './gradlew compileJava'
+                
+             sh '''
+                chmod +x gradlew
+                ./gradlew compileJava'''
             }
         }
         stage('Unit Test'){
             steps{
+                
+                sh '''
                 chmod +x gradlew
-                sh './gradlew test'
+                ./gradlew test
+                '''
             }
         }
     
