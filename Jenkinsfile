@@ -5,6 +5,7 @@ pipeline{
             steps{
                 
              sh '''
+                chmod 755 gradlew
                 ./gradlew compileJava'''
             }
         }
