@@ -6,15 +6,7 @@ pipeline{
                 
              sh '''
                 chmod 755 gradlew
-                gradlew compileJava'''
-            }
-        }
-        stage('Unit Test'){
-            steps{
-                
-                sh '''
-                chmod +x gradlew
-                ./gradlew test'''
+                ./gradlew compileJava'''
             }
         }
     
