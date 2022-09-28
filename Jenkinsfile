@@ -6,8 +6,7 @@ pipeline{
                 
              sh '''
                 chmod +x gradlew
-                ./gradlew compileJava
-                '''
+                ./gradlew compileJava'''
             }
         }
         stage('Unit Test'){
@@ -15,8 +14,7 @@ pipeline{
                 
                 sh '''
                 chmod +x gradlew
-                ./gradlew test
-                '''
+                ./gradlew test'''
             }
         }
     
