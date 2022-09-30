@@ -5,9 +5,18 @@ pipeline{
             steps{
                 
              sh '''
-                chmod 755 gradlew
+                chmod +x gradlew
                 gradle wrapper
                 ./gradlew compileJava'''
+            }
+        }
+        stage('Unit Test'){
+            steps{
+
+                sh '''
+                chmod +x gradlew
+                ./gradlew test
+                '''
             }
         }
     
