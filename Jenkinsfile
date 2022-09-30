@@ -6,6 +6,7 @@ pipeline{
                 
              sh '''
                 chmod 755 gradlew
+                gradle wrapper
                 ./gradlew compileJava'''
             }
         }
